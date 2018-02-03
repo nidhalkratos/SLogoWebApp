@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			h3{color: #00b08a;}
+			body{
+				position:fixed;
+				left:0%;
+				top:0%;
+				width:100%;
+				height:100%;
+				z-index:2;
+				background-color: black;
+				background-image:url("freways.png");
+				background-position: bottom center;
+				background-repeat: repeat-y;
+			}
+			.result{
+				background-color: demo; 
+				height: 50;
+				width: 50;
+				align-self: left;
+				color: #00b08a;
+			}
+			#freeways{
+				width: 15%
+			}
+		</style>
+		<script type="text/javascript">
+			function hexToRgb(hex) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
+}
+
+
+			function
+			myfunction(){
+			couleur=document.getElementById("freeways").value;
+			document.getElementById("demo").innerHTML = "code #hex="+couleur;
+			document.getElementById("r").innerHTML = "r="+hexToRgb(couleur).r;
+			document.getElementById("g").innerHTML = "g="+hexToRgb(couleur).g;
+			document.getElementById("b").innerHTML = "b="+hexToRgb(couleur).b;
+		}
+			
+		</script>
+
+		<TITLE>Color Picker</TITLE>
+	</head>
+	<body>
+		<h3 align="left">choisir un couleur</h3>
+		<input type="Color" id="freeways">
+		<button onclick="myfunction()">send</button>
+		<p id="demo" class="result">code #hex=</p>	
+		<p id="r" class="result">r=</p>
+		
+		<p id="g" class="result">g=</p>
+		
+		<p id="b" class="result">b=</p>
+		
+		
+	</body>
+</html>
