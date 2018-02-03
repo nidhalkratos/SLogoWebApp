@@ -45,6 +45,9 @@
 			document.getElementById("r").innerHTML = "r="+hexToRgb(couleur).r;
 			document.getElementById("g").innerHTML = "g="+hexToRgb(couleur).g;
 			document.getElementById("b").innerHTML = "b="+hexToRgb(couleur).b;
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'http://localhost?set=1&red='+hexToRgb(couleur).r+'&green='+hexToRgb(couleur).g + '&blue=' + hexToRgb(couleur).b , false);
+                xhr.send();
 		}
 			
 		</script>
